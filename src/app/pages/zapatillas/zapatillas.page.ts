@@ -14,10 +14,14 @@ export class ZapatillasPage implements OnInit {
 
   ngOnInit() {
   }
-  irProducto(){
+  irProducto() {
     this.router.navigate(['/producto'])
   }
-  irInicio(){
+  irInicio() {
     this.router.navigate(['/inicio'])
+  }
+
+  irLogin() {
+    this.router.navigate(['/login']);
   }
 }

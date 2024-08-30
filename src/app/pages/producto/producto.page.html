@@ -1,12 +1,18 @@
 <ion-header >
   <ion-toolbar>
-    <div class="color-rojo">
+    <div class="contenedor-flex">
       <ion-title class="centrar">Producto</ion-title>
+      <ion-button shape="round" (click)="irLogin()">iniciar sesion </ion-button>
     </div>
     
     
   </ion-toolbar>
 </ion-header>
+
+<ion-buttons slot="start">
+  <ion-menu-button></ion-menu-button>
+  <ion-back-button></ion-back-button>
+</ion-buttons>
 
 <ion-content [fullscreen]="true">
   <div class="contenedor-logo margin-auto">

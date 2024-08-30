@@ -24,4 +24,10 @@ export class InicioPage implements OnInit {
   irZapatillas(){
     this.router.navigate(['/zapatillas'])
   }
+
+  irLogin(){
+    this.router.navigate(['/login']);
+  }
+
+
 }

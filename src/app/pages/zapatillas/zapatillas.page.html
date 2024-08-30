@@ -1,22 +1,29 @@
-<ion-header >
+<ion-header>
   <ion-toolbar>
-    <div>
+    <div class="contenedor-flex">
       <ion-title class="centrar">Zapatillas</ion-title>
+      <ion-button shape="round" (click)="irLogin()">iniciar sesion </ion-button>
     </div>
-    
-    
+
+
   </ion-toolbar>
 </ion-header>
+
+<ion-buttons slot="start">
+  <ion-menu-button></ion-menu-button>
+  <ion-back-button></ion-back-button>
+</ion-buttons>
 
 <ion-content [fullscreen]="true">
   <div class="contenedor-logo margin-auto">
     <img class="img-logo" src="assets/logo/logo.png" alt="">
   </div>
   <div class="cuadrado-busqueda margin-auto contenedor-flex">
-    <input type="text" class="barra-busqueda margin-auto" placeholder="Buscar zapatilla..." [(ngModel)]="terminoBusqueda">
+    <input type="text" class="barra-busqueda margin-auto" placeholder="Buscar zapatilla..."
+      [(ngModel)]="terminoBusqueda">
     <img src="assets/lupa.png" alt="" class="tamano-lupa margin-topbot-auto">
   </div>
-  
+
   <h2 class="centrar color-negro letras-negrita">Lo más vendido</h2>
 
   <div class="contenedor-cards contenedor-flex" (click)="irProducto()">
@@ -36,18 +43,18 @@
       <div class="contenedor-footer" (click)="irInicio()">
         <img src="assets/inicio.png" alt="" class="tamano-general-imagenes">
       </div>
-  
+
       <div class="contenedor-footer">
         <img src="assets/zapatilogo.png" alt="" class="tamano-general-imagenes">
       </div>
-  
+
       <div class="contenedor-footer arreglar-lista">
         <img src="assets/pedido.png" alt="" class="tamano-general-imagenes">
-  
+
       </div>
       <div class="contenedor-footer">
         <img src="assets/perfil.png" alt="" class="tamano-general-imagenes">
       </div>
-    </div>  
+    </div>
   </ion-toolbar>
 </ion-footer>

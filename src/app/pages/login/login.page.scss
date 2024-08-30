@@ -1,0 +1,44 @@
+.centrar {
+    text-align: center;
+}
+
+.imagen-fondo {
+    --background: url('../../../assets/wallpaper\ pagina\ zapatillas.jfif') no-repeat center center / cover;
+    opacity: 0.5;
+}
+
+.email {
+    margin: auto;
+    width: 250px;
+
+}
+
+.contraseña {
+    margin: auto;
+    width: 250px;
+}
+
+ion-card {
+    margin-top: 100px;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    --background: rgb(0, 0, 0);
+}
+
+
+
+.contenedor-flex{
+    display: flex;
+
+}
+
+.contenedor-footer {
+    width: 50%;
+    text-align: center;
+    align-items: center;
+
+}
+

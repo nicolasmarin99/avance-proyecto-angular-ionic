@@ -14,7 +14,11 @@ export class ProductoPage implements OnInit {
   ngOnInit() {
   }
 
-  irInicio(){
+  irInicio() {
     this.router.navigate(['/inicio'])
+  }
+
+  irLogin() {
+    this.router.navigate(['/login']);
   }
 }
