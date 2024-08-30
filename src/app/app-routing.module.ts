@@ -38,11 +38,22 @@ const routes: Routes = [
     loadChildren: () => import('./pages/recuperar/recuperar.module').then( m => m.RecuperarPageModule)
   },
 
+  {
+    path: 'cambiar',
+    loadChildren: () => import('./pages/cambiar/cambiar.module').then( m => m.CambiarPageModule)
+  },
+
 
   {
     path: '**',
     loadChildren: () => import('./pages/notfound/notfound.module').then(m => m.NotfoundPageModule)
+  },  {
+    path: 'cambiocorrecto',
+    loadChildren: () => import('./pages/cambiocorrecto/cambiocorrecto.module').then( m => m.CambiocorrectoPageModule)
   },
+
+
+
   
  
 
