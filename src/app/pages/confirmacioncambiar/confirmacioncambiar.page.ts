@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-recuperar',
-  templateUrl: './recuperar.page.html',
-  styleUrls: ['./recuperar.page.scss'],
+  selector: 'app-confirmacioncambiar',
+  templateUrl: './confirmacioncambiar.page.html',
+  styleUrls: ['./confirmacioncambiar.page.scss'],
 })
-export class RecuperarPage implements OnInit {
+export class ConfirmacioncambiarPage implements OnInit {
 
   constructor(private router:Router) { }
 
@@ -23,10 +23,6 @@ export class RecuperarPage implements OnInit {
 
   irLogin(){
     this.router.navigate(['/login']);
-  }
-
-  irCambiar(){
-    this.router.navigate(['/cambiar'])
   }
 
 }

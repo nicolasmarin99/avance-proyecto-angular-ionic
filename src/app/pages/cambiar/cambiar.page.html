@@ -15,22 +15,28 @@
 <ion-content [fullscreen]="true" class="fondo-wallpaper">
   <ion-card>
     <ion-card-header>
-      <ion-card-title>Restablece tu contraseña</ion-card-title>
-      <ion-card-subtitle>por favor ingrese su email con el que se registro</ion-card-subtitle>
+      <ion-card-title>ingrese su nueva contraseña</ion-card-title>
     </ion-card-header>
   
     <ion-card-content>
       <ion-input
-  type="email"
+  type="password"
   fill="solid"
-  label="Email"
+  label="ingrese su nueva contraseña"
   labelPlacement="floating"
-  helperText="Enter a valid email"
-  errorText="Invalid email"
   ngModel
-  email
+  password
 ></ion-input>
-  <ion-button (click)="irCambiar()">enviar</ion-button>
+<ion-input
+type="password"
+fill="solid"
+label="repita la contraseña"
+labelPlacement="floating"
+errorText="contraseñas no coinciden"
+ngModel
+password
+></ion-input>
+  <ion-button (click)="irConfirmacion()">cambiar contraeña</ion-button>
     </ion-card-content>
   </ion-card>
 </ion-content>

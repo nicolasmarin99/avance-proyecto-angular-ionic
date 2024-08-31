@@ -1,8 +1,8 @@
 <ion-header>
-  <ion-toolbar >
+  <ion-toolbar>
     <div class="contenedor-flex">
       <ion-title class="centrar">ZapFast</ion-title>
-      <ion-button shape="round" (click)="irLogin()">iniciar sesion </ion-button>
+      <ion-button shape="round" (click)="irLogin()">Iniciar sesión</ion-button>
     </div>
   </ion-toolbar>
 </ion-header>
@@ -15,22 +15,15 @@
 <ion-content [fullscreen]="true" class="fondo-wallpaper">
   <ion-card>
     <ion-card-header>
-      <ion-card-title>Restablece tu contraseña</ion-card-title>
-      <ion-card-subtitle>por favor ingrese su email con el que se registro</ion-card-subtitle>
+      <ion-card-title>que marca desea añadir?</ion-card-title>
     </ion-card-header>
-  
+
+    <ion-item>
+      <ion-input [(ngModel)]="nombreProducto" label="Nombre del producto" placeholder=""></ion-input>
+    </ion-item>
+
     <ion-card-content>
-      <ion-input
-  type="email"
-  fill="solid"
-  label="Email"
-  labelPlacement="floating"
-  helperText="Enter a valid email"
-  errorText="Invalid email"
-  ngModel
-  email
-></ion-input>
-  <ion-button (click)="irCambiar()">enviar</ion-button>
+      <ion-button color="dark">Añadir marca</ion-button>
     </ion-card-content>
   </ion-card>
 </ion-content>
@@ -48,8 +41,8 @@
 
       <div class="contenedor-footer arreglar-lista">
         <img src="assets/pedido.png" alt="" class="tamano-general-imagenes">
-
       </div>
+
       <div class="contenedor-footer">
         <img src="assets/perfil.png" alt="" class="tamano-general-imagenes">
       </div>

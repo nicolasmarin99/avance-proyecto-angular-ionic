@@ -24,4 +24,12 @@ export class ZapatillasPage implements OnInit {
   irLogin() {
     this.router.navigate(['/login']);
   }
+
+  irAddproducto(){
+    this.router.navigate(['/agregarproducto'])
+  }
+
+  irAddmarca(){
+    this.router.navigate(['/anadirmarca'])
+  }
 }

@@ -98,3 +98,9 @@ ion-title{
 .color-negro{
     color:black;
 }
+
+.options{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

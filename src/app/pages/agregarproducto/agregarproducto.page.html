@@ -1,0 +1,114 @@
+<ion-header>
+  <ion-toolbar >
+    <div class="contenedor-flex">
+      <ion-title class="centrar">ZapFast</ion-title>
+      <ion-button shape="round" (click)="irLogin()">iniciar sesion </ion-button>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-buttons slot="start">
+  <ion-menu-button></ion-menu-button>
+  <ion-back-button></ion-back-button>
+</ion-buttons>
+
+<ion-content [fullscreen]="true" class="fondo-wallpaper">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>complete los datos del producto a agregar </ion-card-title>
+    </ion-card-header>
+
+    <ion-item>
+      <ion-input label="nombre del producto" placeholder=""></ion-input>
+    </ion-item>
+
+    <ion-list>
+      <ion-item>
+        <ion-select
+          interface="popover"
+          toggleIcon="add"
+          expandedIcon="remove"
+          placeholder="marca"
+        >
+          <ion-select-option value="nike">nike</ion-select-option>
+          <ion-select-option value="adidas">adidas</ion-select-option>
+          <ion-select-option value="new balance">new balance</ion-select-option>
+          <ion-select-option value="puma">puma</ion-select-option>
+          <ion-select-option value="reebok">reebok</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+
+    <ion-list>
+      <ion-item>
+        <ion-select
+          interface="popover"
+          toggleIcon="add"
+          expandedIcon="remove"
+          placeholder="talla US"
+        >
+          <ion-select-option value="nike">4</ion-select-option>
+          <ion-select-option value="adidas">4.5</ion-select-option>
+          <ion-select-option value="new balance">5.0</ion-select-option>
+          <ion-select-option value="puma">5.5</ion-select-option>
+          <ion-select-option value="reebok">6.0</ion-select-option>
+          <ion-select-option value="reebok">6.5</ion-select-option>
+          <ion-select-option value="reebok">7.0</ion-select-option>
+          <ion-select-option value="reebok">7.5</ion-select-option>
+          <ion-select-option value="reebok">8.0</ion-select-option>
+          <ion-select-option value="reebok">8.5</ion-select-option>
+          <ion-select-option value="reebok">9.0</ion-select-option>
+          <ion-select-option value="reebok">9.5</ion-select-option>
+          <ion-select-option value="reebok">10.0</ion-select-option>
+          <ion-select-option value="reebok">10.5</ion-select-option>
+          <ion-select-option value="reebok">11.0</ion-select-option>
+          <ion-select-option value="reebok">11.5</ion-select-option>
+
+        </ion-select>
+
+        
+      </ion-item>
+    </ion-list>
+    <p>agregar imagen</p>
+    <div class="addimg">
+      <ion-item>
+        <ion-fab>
+          <ion-fab-button size="small">
+            <ion-icon name="add"></ion-icon>
+          </ion-fab-button>
+          <ion-fab-list side="end">
+            <ion-fab-button>
+              <ion-icon name="document"></ion-icon>
+            </ion-fab-button>
+          </ion-fab-list>
+        </ion-fab>
+      </ion-item>
+    </div>
+  
+    <ion-card-content>
+     <ion-button color="dark" (click)="irZapatillas()">añadir producto</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<ion-footer class="color-rojo">
+  <ion-toolbar>
+    <div class="contenedor-flex">
+      <div class="contenedor-footer" (click)="irInicio()">
+        <img src="assets/inicio.png" alt="" class="tamano-general-imagenes">
+      </div>
+
+      <div class="contenedor-footer" (click)="irZapatillas()">
+        <img src="assets/zapatilogo.png" alt="" class="tamano-general-imagenes">
+      </div>
+
+      <div class="contenedor-footer arreglar-lista">
+        <img src="assets/pedido.png" alt="" class="tamano-general-imagenes">
+
+      </div>
+      <div class="contenedor-footer">
+        <img src="assets/perfil.png" alt="" class="tamano-general-imagenes">
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-footer>
