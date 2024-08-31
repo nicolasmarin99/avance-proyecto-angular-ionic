@@ -26,7 +26,11 @@ export class RecuperarPage implements OnInit {
   }
 
   irCambiar(){
+<<<<<<< HEAD
     this.router.navigate(['/cambiar'])
+=======
+    this.router.navigate(['/cambiar']);
+>>>>>>> ce5bca60ca11d3288addc572f1d0f10bd83121a0
   }
 
 }

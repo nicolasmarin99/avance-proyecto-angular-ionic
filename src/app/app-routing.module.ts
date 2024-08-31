@@ -43,6 +43,35 @@ const routes: Routes = [
     loadChildren: () => import('./pages/cambiar/cambiar.module').then( m => m.CambiarPageModule)
   },
 
+
+  {
+    path: '**',
+    loadChildren: () => import('./pages/notfound/notfound.module').then(m => m.NotfoundPageModule)
+  },  {
+    path: 'cambiocorrecto',
+    loadChildren: () => import('./pages/cambiocorrecto/cambiocorrecto.module').then( m => m.CambiocorrectoPageModule)
+  },
+
+<<<<<<< HEAD
+  {
+    path: 'login',
+    loadChildren: () => import('./pages/login/login.module').then(m => m.LoginPageModule)
+  },
+  {
+    path: 'registro',
+    loadChildren: () => import('./pages/registro/registro.module').then( m => m.RegistroPageModule)
+  },
+  
+  {
+    path: 'recuperar',
+    loadChildren: () => import('./pages/recuperar/recuperar.module').then( m => m.RecuperarPageModule)
+  },
+
+  {
+    path: 'cambiar',
+    loadChildren: () => import('./pages/cambiar/cambiar.module').then( m => m.CambiarPageModule)
+  },
+
   {
     path: 'confirmacioncambiar',
     loadChildren: () => import('./pages/confirmacioncambiar/confirmacioncambiar.module').then( m => m.ConfirmacioncambiarPageModule)
@@ -83,3 +112,21 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+=======
+
+
+  
+ 
+
+
+
+];
+
+@NgModule({
+  imports: [
+    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
+  ],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
+>>>>>>> ce5bca60ca11d3288addc572f1d0f10bd83121a0
