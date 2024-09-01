@@ -25,11 +25,8 @@ export class CambiarPage implements OnInit {
     this.router.navigate(['/login']);
   }
 
-<<<<<<< HEAD
   irConfirmacion(){
-    this.router.navigate(['/confirmacioncambiar'])
+    this.router.navigate(['/cambiocorrecto'])
   }
-=======
->>>>>>> ce5bca60ca11d3288addc572f1d0f10bd83121a0
 
 }
