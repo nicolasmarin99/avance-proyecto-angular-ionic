@@ -52,6 +52,11 @@ const routes: Routes = [
     path: 'anadirmarca',
     loadChildren: () => import('./pages/anadirmarca/anadirmarca.module').then( m => m.AnadirmarcaPageModule)
   },
+
+  {
+    path: 'agregarproducto',
+    loadChildren: () => import('./pages/agregarproducto/agregarproducto.module').then( m => m.AgregarproductoPageModule)
+  },
   
   {
     path: '**',
