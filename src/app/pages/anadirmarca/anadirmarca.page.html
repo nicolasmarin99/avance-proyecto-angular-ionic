@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-toolbar>
+    <div class="contenedor-flex">
+      <ion-title class="centrar">ZapFast</ion-title>
+      <ion-button shape="round" (click)="irLogin()">iniciar sesion </ion-button>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-buttons slot="start">
+  <ion-menu-button></ion-menu-button>
+  <ion-back-button></ion-back-button>
+</ion-buttons>
+
+<ion-content [fullscreen]="true" class="fondo-wallpaper">
+  <div class="contenedor-flex">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>ingrese la marca que desea agregar </ion-card-title>
+      </ion-card-header>
+
+      <ion-item>
+        <ion-input [(ngModel)]="marca" label="marca" placeholder=""></ion-input>
+      </ion-item>
+
+      <ion-card-content>
+        <ion-button color="dark" (click)="addMarca()">añadir marca</ion-button>
+      </ion-card-content>
+    </ion-card>
+
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Marcas agregadas</ion-card-title>
+      </ion-card-header>
+
+      <ion-list>
+        <ion-item *ngFor="let marca of marcas, let i = index">
+          {{ marca }}
+          <ion-button color="danger" (click)="eliminarMarca(i)" slot="end">
+            Eliminar
+          </ion-button>
+        </ion-item>
+      </ion-list>
+    </ion-card> 
+  </div>
+</ion-content>
+
+<ion-footer class="color-rojo">
+  <ion-toolbar>
+    <div class="contenedor-flex">
+      <div class="contenedor-footer" (click)="irInicio()">
+        <img src="assets/inicio.png" alt="" class="tamano-general-imagenes">
+      </div>
+
+      <div class="contenedor-footer" (click)="irZapatillas()">
+        <img src="assets/zapatilogo.png" alt="" class="tamano-general-imagenes">
+      </div>
+
+      <div class="contenedor-footer arreglar-lista">
+        <img src="assets/pedido.png" alt="" class="tamano-general-imagenes">
+
+      </div>
+      <div class="contenedor-footer">
+        <img src="assets/perfil.png" alt="" class="tamano-general-imagenes">
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-footer>

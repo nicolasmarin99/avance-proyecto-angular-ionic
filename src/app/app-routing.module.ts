@@ -47,11 +47,18 @@ const routes: Routes = [
     path: 'cambiocorrecto',
     loadChildren: () => import('./pages/cambiocorrecto/cambiocorrecto.module').then( m => m.CambiocorrectoPageModule)
   },
+
+  {
+    path: 'anadirmarca',
+    loadChildren: () => import('./pages/anadirmarca/anadirmarca.module').then( m => m.AnadirmarcaPageModule)
+  },
   
   {
     path: '**',
     loadChildren: () => import('./pages/notfound/notfound.module').then(m => m.NotfoundPageModule)
   },
+
+
 
   
 ];
