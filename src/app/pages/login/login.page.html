@@ -17,22 +17,20 @@
   <ion-card>
     <ion-card-content >
       <div class="email">
-        <ion-input type="email" fill="solid" label="Email" labelPlacement="floating" errorText="Invalid email" ngModel
-          email>
+        <ion-input type="email" fill="solid" label="Email" labelPlacement="floating" errorText="Invalid email" [(ngModel)]="email">
         </ion-input>
 
       </div>
 
       <div class="contraseña">
         <ion-input type="password" fill="solid" label="Ingresa tu contraseña" labelPlacement="floating"
-          errorText="contraseña invalida" ngModel password>
+          errorText="contraseña invalida" [(ngModel)]="contrasena">
         </ion-input>
       </div>
 
       <div>
-        <ion-button size="small">entrar</ion-button>
-        <ion-button size="small" (click)="irRegistro()">registrarse</ion-button>
-
+        <ion-button size="small" (click)="validacion()">Entrar</ion-button>
+        <ion-button size="small" (click)="irRegistro()">Registrarse</ion-button>
       </div>
 
       <a (click)="irRecuperar()">¿olvidaste tu contraseña?</a>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-anadirmarca',
@@ -10,11 +10,12 @@ export class AnadirmarcaPage implements OnInit {
 
   marca: string = ''; // Variable para almacenar la marca ingresada
   marcas: string[] = []; // Lista para almacenar las marcas
+  usuario:string=""
 
-  constructor(private router:Router) { }
-
-  ngOnInit() {
+  constructor(private router:Router) { 
   }
+
+  ngOnInit() {}
 
   irInicio(){
     this.router.navigate(['/inicio'])

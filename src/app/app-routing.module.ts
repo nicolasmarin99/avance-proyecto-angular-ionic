@@ -57,11 +57,18 @@ const routes: Routes = [
     path: 'agregarproducto',
     loadChildren: () => import('./pages/agregarproducto/agregarproducto.module').then( m => m.AgregarproductoPageModule)
   },
+
+  {
+    path: 'zapatillasuser',
+    loadChildren: () => import('./pages/zapatillasuser/zapatillasuser.module').then( m => m.ZapatillasuserPageModule)
+  },
   
   {
     path: '**',
     loadChildren: () => import('./pages/notfound/notfound.module').then(m => m.NotfoundPageModule)
   },
+
+
 
 
 

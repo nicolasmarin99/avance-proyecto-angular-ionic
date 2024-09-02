@@ -2,7 +2,7 @@
   <ion-toolbar>
     <div class="contenedor-flex">
       <ion-title class="centrar">Zapatillas</ion-title>
-      <p>hola jorge</p>
+      <p>hola,{{usuario}}</p>
     </div>
 
 
@@ -25,11 +25,6 @@
   </div>
 
   <h2 class="centrar color-negro letras-negrita">Lo más vendido</h2>
-
-  <div class=options>
-    <ion-button shape="round" (click)="irAddproducto()">agregar producto</ion-button>
-    <ion-button shape="round" (click)="irAddmarca()">agregar marca</ion-button>
-  </div>
 
   <div class="contenedor-cards contenedor-flex" (click)="irProducto()">
     <div class="margin-auto centrar"><img src="assets/zapatilla.png" alt="" class="tamano-zapatilla"></div>
