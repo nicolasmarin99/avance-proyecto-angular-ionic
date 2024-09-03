@@ -1,6 +1,10 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>registrarse</ion-title>
+   <div class="contenedor-flex">
+    <img src="../../../assets/zapatilogo.png" alt="">
+    <ion-title>Registrarse</ion-title>
+    
+   </div>
   </ion-toolbar>
 </ion-header>
 
@@ -9,41 +13,86 @@
   <ion-back-button></ion-back-button>
 </ion-buttons>
 
+<div class="logo">
+  <img src="../../../assets/logo/logo.png" alt="">
+</div>
+
 <ion-content [fullscreen]="true" class="fondo-imagen">
-
   <div class="container">
-    <h6>ingrese su nombre</h6>
-    <ion-list>
-      <ion-item class="labels">
-        <ion-input aria-label="Email" placeholder="nombre"></ion-input>
-      </ion-item>
-    </ion-list>
-    <h6>ingrese su correo</h6>
-    <ion-list>
-      <ion-item class="labels">
-        <ion-input aria-label="Email" value="email"></ion-input>
-      </ion-item>
-    </ion-list>
-    <h6>repita su contraseña</h6>
-    <ion-list>
-      <ion-item>
-        <ion-input aria-label="Email" placeholder="ingrese contraseña" type="password"></ion-input>
-      </ion-item>
-    </ion-list>
-    <h6>repita su contraseña</h6>
-    <ion-list>
-      <ion-item>
-        <ion-input aria-label="password" placeholder="ingrese contraseña" type="password"></ion-input>
-      </ion-item>
-    </ion-list>
+    <form #registroForm="ngForm" (ngSubmit)="validarFormulario(registroForm)">
+      <h6>Ingrese su nombre</h6>
+      <ion-list>
+        <ion-item class="labels">
+          <ion-input
+            name="nombre"
+            ngModel
+            required
+            placeholder="Nombre"
+            #nombre="ngModel"
+          ></ion-input>
+        </ion-item>
+        <ion-note *ngIf="nombre.invalid && nombre.touched">El nombre es requerido.</ion-note>
+      </ion-list>
 
-    <div class="botones">
-      <ion-button size="small" (click)="irLogin()">registrarse</ion-button>
-    </div>
+      <h6>Ingrese su correo</h6>
+      <ion-list>
+        <ion-item class="labels">
+          <ion-input
+            name="email"
+            ngModel
+            required
+            email
+            placeholder="Correo electrónico"
+            #email="ngModel"
+          ></ion-input>
+        </ion-item>
+        <ion-note *ngIf="email.invalid && email.touched">Correo electrónico inválido.</ion-note>
+      </ion-list>
 
+      <h6>Ingrese su contraseña</h6>
+      <ion-list>
+        <ion-item class="labels">
+          <ion-input
+            name="contrasena"
+            ngModel
+            required
+            minlength="8"
+            pattern="^(?=.*[A-Z])(?=.*[0-9]).+$"
+            placeholder="Contraseña"
+            type="password"
+            #contrasena="ngModel"
+          ></ion-input>
+        </ion-item>
+        <ion-note *ngIf="contrasena.invalid && contrasena.touched">
+          La contraseña debe tener al menos 8 caracteres, una mayúscula y un número.
+        </ion-note>
+      </ion-list>
+
+      <h6>Repita su contraseña</h6>
+      <ion-list>
+        <ion-item class="labels">
+          <ion-input
+            name="confirmarContrasena"
+            ngModel
+            required
+            placeholder="Repita la contraseña"
+            type="password"
+            #confirmarContrasena="ngModel"
+          ></ion-input>
+        </ion-item>
+        <ion-note *ngIf="confirmarContrasena.invalid && confirmarContrasena.touched">
+          Por favor, confirme su contraseña.
+        </ion-note>
+        <ion-note *ngIf="contrasena.value !== confirmarContrasena.value && confirmarContrasena.touched">
+          Las contraseñas no coinciden.
+        </ion-note>
+      </ion-list>
+
+      <div class="botones">
+        <ion-button size="small" type="submit" (click)="irLogin()">Registrarse</ion-button>
+      </div>
+    </form>
   </div>
-
-
 </ion-content>
 
 <ion-footer class="color-rojo">
@@ -59,7 +108,6 @@
 
       <div class="contenedor-footer arreglar-lista">
         <img src="assets/pedido.png" alt="" class="tamano-general-imagenes">
-
       </div>
       <div class="contenedor-footer">
         <img src="assets/perfil.png" alt="" class="tamano-general-imagenes">

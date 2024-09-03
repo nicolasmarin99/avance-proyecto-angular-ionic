@@ -2,6 +2,16 @@ ion-title {
     text-align: center;
 }
 
+.logo{
+    margin: auto;
+}
+
+.contenedor-flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 .fondo-imagen {
     --background: url('../../../assets/wallpaper\ pagina\ zapatillas.jfif') no-repeat center center / cover;
     opacity: 0.5;
